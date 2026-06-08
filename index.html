@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>On tap Toan roi rac</title>
+  <style>
+    :root {
+      --bg-1: #f7f4ed;
+      --bg-2: #e8f3ee;
+      --ink: #1f2a37;
+      --muted: #5b6470;
+      --accent: #0f766e;
+      --accent-2: #b45309;
+      --card: #ffffff;
+      --ring: rgba(15, 118, 110, 0.22);
+      --shadow: 0 18px 40px rgba(31, 42, 55, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(15, 118, 110, 0.13), transparent 45%),
+        radial-gradient(circle at 90% 0%, rgba(180, 83, 9, 0.14), transparent 40%),
+        linear-gradient(140deg, var(--bg-1), var(--bg-2));
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 18px 48px;
+    }
+
+    .hero {
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(31, 42, 55, 0.08);
+      backdrop-filter: blur(6px);
+      border-radius: 18px;
+      padding: 22px 22px 18px;
+      box-shadow: var(--shadow);
+      animation: fadeInUp 0.7s ease-out both;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+      letter-spacing: 0.2px;
+    }
+
+    .sub {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .actions {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      text-decoration: none;
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: 650;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn.primary {
+      color: #fff;
+      background: linear-gradient(120deg, var(--accent), #155e75);
+      box-shadow: 0 8px 20px rgba(15, 118, 110, 0.28);
+    }
+
+    .btn.secondary {
+      color: var(--ink);
+      border-color: rgba(31, 42, 55, 0.18);
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .grid {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      text-decoration: none;
+      color: inherit;
+      background: var(--card);
+      border: 1px solid rgba(31, 42, 55, 0.1);
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: 0 8px 18px rgba(31, 42, 55, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      animation: fadeInUp 0.7s ease both;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--ring);
+      box-shadow: 0 14px 30px rgba(31, 42, 55, 0.14);
+    }
+
+    .kicker {
+      margin: 0;
+      color: var(--accent-2);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+    }
+
+    .title {
+      margin: 6px 0 4px;
+      font-size: 1.03rem;
+      font-weight: 700;
+    }
+
+    .meta {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: 10px;
+      border: 1px dashed rgba(31, 42, 55, 0.2);
+      padding: 10px 12px;
+      animation: fadeInUp 0.9s ease both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>On tap Toan roi rac dang thi</h1>
+      <p class="sub">Landing page nay de xem nhanh tai lieu theo chuong khi dang len GitHub / GitHub Pages.</p>
+      <div class="actions">
+        <a class="btn primary" href="README.md">Mo README goc</a>
+        <a class="btn secondary" href="main.pdf">Mo file PDF</a>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Danh sach chuong">
+      <a class="card" href="B5_Cac_khai_niem/B5_Cac_khai_niem.html">
+        <p class="kicker">Chuong 2</p>
+        <p class="title">B5 - Cac khai niem co ban</p>
+        <p class="meta">Tong quan dinh nghia do thi, bac dinh, thuat ngu.</p>
+      </a>
+
+      <a class="card" href="B6_Bieu_dien_do_thi/B6_Bieu_dien_do_thi%20(done).html">
+        <p class="kicker">Chuong 2</p>
+        <p class="title">B6 - Bieu dien do thi</p>
+        <p class="meta">Ma tran ke, ma tran trong so, cach quy doi.</p>
+      </a>
+
+      <a class="card" href="B7_Cac_thuat_toan_duyet_do_thi/B7_Cac_thuat_toan_duyet_do_thi.html">
+        <p class="kicker">Chuong 2</p>
+        <p class="title">B7 - Duyet do thi</p>
+        <p class="meta">BFS, DFS va cach trinh bay bai thi.</p>
+      </a>
+
+      <a class="card" href="B8_chu_trinh_Euler_Hamilton/B8_chu_trinh_Euler_Hamilton.html">
+        <p class="kicker">Chuong 2</p>
+        <p class="title">B8 - Euler va Hamilton</p>
+        <p class="meta">Dieu kien, quy trinh xet, dang bai thuong gap.</p>
+      </a>
+
+      <a class="card" href="B9_Trees/B9_Trees.html">
+        <p class="kicker">Chuong 2</p>
+        <p class="title">B9 - Trees</p>
+        <p class="meta">Cay, cay khung, cac tinh chat can nho.</p>
+      </a>
+
+      <a class="card" href="B10_BT_tim_duong_di_ngan_nhat/B10_BT_tim_duong_di_ngan_nhat.html">
+        <p class="kicker">Chuong 2</p>
+        <p class="title">B10 - Tim duong di ngan nhat</p>
+        <p class="meta">Bai tap va mau trinh bay ket qua.</p>
+      </a>
+
+      <a class="card" href="B11_BT_luong_cuc_dai/B11_BT_luong_cuc_dai.html">
+        <p class="kicker">Chuong 2</p>
+        <p class="title">B11 - Luong cuc dai</p>
+        <p class="meta">Max-flow, min-cut va bai tap tong hop.</p>
+      </a>
+
+      <a class="card" href="B12_Dai_so_Boole/B12_Dai_so_Boole.html">
+        <p class="kicker">Chuong 3</p>
+        <p class="title">B12 - Dai so Boole</p>
+        <p class="meta">Rut gon bieu thuc, bang chan tri, cac luat.</p>
+      </a>
+    </section>
+
+    <p class="note">
+      Ghi chu: README.md duoc giu nguyen noi dung. Trang nay duoc tao rieng de hien thi bo cuc dep khi public tren GitHub Pages.
+    </p>
+  </main>
+</body>
+</html>
