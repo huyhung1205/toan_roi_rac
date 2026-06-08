@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>README - Ôn tập Toán rời rạc</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown.min.css"
+        integrity="sha512-5gT2qN6Auk5vD7PAqVgoQwktKQGcYxWqzJY47jW/Tv0P5ohsV3qV6M4M7OnMQQsP9PH5QfzQw0j8f6iI5x0r2Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+
+    <style>
+        :root {
+            --bg-1: #fff8ec;
+            --bg-2: #ebf7f5;
+            --ink: #1f2a37;
+            --muted: #52606d;
+            --accent: #0f766e;
+            --card: #ffffff;
+            --line: rgba(31, 42, 55, 0.1);
+            --shadow: 0 22px 50px rgba(31, 42, 55, 0.14);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            color: var(--ink);
+            font-family: "Be Vietnam Pro", "Segoe UI", sans-serif;
+            background:
+                radial-gradient(circle at 10% 5%, rgba(15, 118, 110, 0.16), transparent 45%),
+                radial-gradient(circle at 90% 0%, rgba(180, 83, 9, 0.16), transparent 44%),
+                linear-gradient(140deg, var(--bg-1), var(--bg-2));
+        }
+
+        .shell {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 26px 16px 46px;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 14px 16px;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.78);
+            backdrop-filter: blur(7px);
+            box-shadow: 0 10px 22px rgba(31, 42, 55, 0.1);
+        }
+
+        .brand {
+            font-weight: 800;
+            letter-spacing: 0.2px;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 10px;
+            padding: 9px 12px;
+            transition: transform 0.18s ease, box-shadow 0.2s ease;
+            border: 1px solid transparent;
+            font-size: 0.92rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .btn.primary {
+            color: #fff;
+            background: linear-gradient(120deg, var(--accent), #155e75);
+            box-shadow: 0 9px 18px rgba(15, 118, 110, 0.24);
+        }
+
+        .btn.ghost {
+            color: var(--ink);
+            border-color: var(--line);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .panel {
+            margin-top: 14px;
+            border-radius: 18px;
+            border: 1px solid var(--line);
+            background: var(--card);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            animation: rise 0.52s ease;
+        }
+
+        .state {
+            padding: 26px 20px;
+            color: var(--muted);
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 26px clamp(14px, 3vw, 34px) 34px;
+            font-family: "Be Vietnam Pro", "Segoe UI", sans-serif;
+            line-height: 1.72;
+        }
+
+        .markdown-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .markdown-body table {
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: auto;
+            margin: 14px 0;
+            background: #fff;
+        }
+
+        .markdown-body th,
+        .markdown-body td {
+            border: 1px solid #d0d7de;
+            padding: 8px 10px;
+            vertical-align: top;
+            white-space: nowrap;
+        }
+
+        .markdown-body .table-wrap {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .markdown-body h1,
+        .markdown-body h2,
+        .markdown-body h3,
+        .markdown-body h4 {
+            border-bottom: none;
+            margin-top: 1.45em;
+        }
+
+        @keyframes rise {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .topbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .actions {
+                width: 100%;
+            }
+
+            .btn {
+                flex: 1;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <header class="topbar">
+            <div class="brand">Ôn tập Toán rời rạc</div>
+            <div class="actions">
+                <a class="btn ghost" href="index.html">Về trang chính</a>
+                <a class="btn primary" href="README.md" target="_blank" rel="noopener noreferrer">Mở Markdown gốc</a>
+            </div>
+        </header>
+
+        <section class="panel">
+            <div id="state" class="state">Đang tải nội dung README...</div>
+            <article id="content" class="markdown-body" style="display:none;"></article>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+    <script>
+        function normalizeRootRelativePaths(md) {
+            return md.replace(/\b(src|href)=(["'])\/(?!\/)([^"']+)\2/gi, '$1=$2./$3$2');
+        }
+
+        function normalizeMathDelimiters(md) {
+            // Convert \( ... \) and \[ ... \] to $...$ and $$...$$ before markdown parsing.
+            // GFM may strip backslashes in these delimiters, preventing KaTeX auto-render.
+            return md
+                .replace(/\\\[([\s\S]*?)\\\]/g, (_, expr) => `$$${expr}$$`)
+                .replace(/\\\(([\s\S]*?)\\\)/g, (_, expr) => `$${expr}$`);
+        }
+
+        async function renderReadme() {
+            const state = document.getElementById('state');
+            const content = document.getElementById('content');
+
+            try {
+                const res = await fetch('README.md', { cache: 'no-store' });
+                if (!res.ok) {
+                    throw new Error('Không đọc được README.md');
+                }
+
+                let markdown = await res.text();
+                markdown = normalizeRootRelativePaths(markdown);
+                markdown = normalizeMathDelimiters(markdown);
+
+                marked.setOptions({
+                    gfm: true,
+                    tables: true,
+                    breaks: false,
+                    mangle: false,
+                    headerIds: true
+                });
+
+                content.innerHTML = marked.parse(markdown);
+
+                if (window.renderMathInElement) {
+                    renderMathInElement(content, {
+                        throwOnError: false,
+                        strict: 'ignore',
+                        delimiters: [
+                            { left: '$$', right: '$$', display: true },
+                            { left: '$', right: '$', display: false },
+                            { left: '\\(', right: '\\)', display: false },
+                            { left: '\\[', right: '\\]', display: true }
+                        ]
+                    });
+                }
+
+                content.querySelectorAll('table').forEach((table) => {
+                    if (table.parentElement && table.parentElement.classList.contains('table-wrap')) {
+                        return;
+                    }
+                    const wrap = document.createElement('div');
+                    wrap.className = 'table-wrap';
+                    table.parentNode.insertBefore(wrap, table);
+                    wrap.appendChild(table);
+                });
+
+                state.style.display = 'none';
+                content.style.display = 'block';
+                document.title = 'README - Ôn tập Toán rời rạc';
+            } catch (err) {
+                state.textContent = 'Lỗi tải README: ' + err.message;
+            }
+        }
+
+        renderReadme();
+    </script>
+</body>
+
+</html>
